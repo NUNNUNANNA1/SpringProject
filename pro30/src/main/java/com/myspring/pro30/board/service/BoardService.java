@@ -10,6 +10,7 @@ public interface BoardService {
 	public int addNewArticle(Map articleMap) throws Exception;
 	public ArticleVO viewArticle(int articleNO) throws Exception;
 	//public Map viewArticle(int articleNO) throws Exception;
+	//aa
 	public void modArticle(Map articleMap) throws Exception;
 	public void removeArticle(int articleNO) throws Exception;
 }
