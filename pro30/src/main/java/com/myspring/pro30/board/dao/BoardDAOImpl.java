@@ -32,6 +32,10 @@ public class BoardDAOImpl implements BoardDAO {
 		sqlSession.insert("mapper.board.insertNewArticle",articleMap);
 		return articleNO;
 	}
+	
+	private int selectNewArticleNO() throws DataAccessException {
+		return sqlSession.selectOne("mapper.board.selectNewArticleNO");
+	}
     
 	//다중 파일 업로드
 	/*
@@ -72,9 +76,7 @@ public class BoardDAOImpl implements BoardDAO {
 		return imageFileList;
 	}
 	
-	private int selectNewArticleNO() throws DataAccessException {
-		return sqlSession.selectOne("mapper.board.selectNewArticleNO");
-	}
+	
 	
 	private int selectNewImageFileNO() throws DataAccessException {
 		return sqlSession.selectOne("mapper.board.selectNewImageFileNO");
